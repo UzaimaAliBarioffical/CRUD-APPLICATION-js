@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD APPLICATION</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CRUD APPLICATION USING MOCKAPI</h1>
+        <div class="row">
+            <div class="col-6">
+                <h2>posts</h2>
+                <div class="post">
+                    
+                </div>
+            </div>
+            <div class="col-6">
+                <div id="create-post">
+                    <h2>create post</h2>
+                    <form id="createPostForm">
+                        <input type="text" name="name" id="name"
+                        placeholder="Enter your name" required>
+                        <input type="text" name="tittle" id="title"
+                        placeholder=" your title" required>
+                        <input type="text" name="avatar" id="avatar"
+                        placeholder=" your profile url" required>
+                        <textarea name="body" id="body" placeholder="enter your description"></textarea>
+                        <button type="submit">create post</button>
+                    </form>
+                </div>
+                <!-- ubdate-post -->
+                <div id="ubdate-post" style="display: none;">
+                    <h2>ubdate post</h2>
+                    <form id="ubdatepostForm">
+                        <input type="text" name="name" id="name"
+                        placeholder="Enter your name" required>
+                        <input type="text" name="tittle" id="title"
+                        placeholder=" your title" required>
+                        <input type="text" name="avatar" id="avatar"
+                        placeholder=" your profile url" required>
+                        <textarea name="body" id="body" placeholder="enter your description"></textarea>
+                        <button type="submit">ubdate post</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
