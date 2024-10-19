@@ -45,9 +45,9 @@ document.getElementById("createPostForm").addEventListener("submit", function (e
     const name = document.getElementById("name").value;
     const tittle = document.getElementById("title").value;
     const avatar = document.getElementById("avatar").value;
-    const description = document.getElementById("body").value;
+    const body = document.getElementById("body").value;
     const newPost = {
-      Name: name,
+      name: name,
       tittle: tittle,
       avatar: avatar,
       body: body,
@@ -58,7 +58,7 @@ document.getElementById("createPostForm").addEventListener("submit", function (e
 
     fetch(apiUrl, {
       method: 'POST',
-      Headers: {
+      headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(newPost),
@@ -67,6 +67,11 @@ document.getElementById("createPostForm").addEventListener("submit", function (e
       .then((data) => console.log(data))
       .catch((error) => console.log(error));
   });
+ document.getElementById("name").value="";
+ document.getElementById("title").value="";
+ document.getElementById("avatar").value="";
+ document.getElementById("body").value="";
+  
 // ================DELET==========================
 
 function deletePost(id) {
@@ -105,7 +110,7 @@ document.getElementById("updatepostForm").body.value =post.body
 
 })
   .catch((error) => console.log(`error`, error));
-  document.getElementById("udatepostForm").addEventListener("submit",function(e){
+  document.getElementById("updatepostForm").addEventListener("submit",function(e){
     e.preventDefault()
     console.log("hello i am raning");
     const name = document.getElementById("name").value;
@@ -113,7 +118,7 @@ document.getElementById("updatepostForm").body.value =post.body
       const avatar = document.getElementById("avatar").value;
       const body = document.getElementById("body").value;
       const ubdateData = {
-        Name: name,
+        name: name,
         tittle: tittle,
         avatar: avatar,
         body: body,
