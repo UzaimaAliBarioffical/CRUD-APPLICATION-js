@@ -110,6 +110,8 @@ function editPost(id) {
     .addEventListener("submit", function (e) {
       e.preventDefault();
       // console.log("hello i am raning");
+      document.getElementById("create-post").style.display = "block";
+      document.getElementById("update-post").style.display = "none";
       const name = document.getElementById("name").value;
       const tittle = document.getElementById("title").value;
       const avatar = document.getElementById("avatar").value;
@@ -124,8 +126,8 @@ function editPost(id) {
 
       fetch(`${apiUrl}/${id}`, {
         method: "PUT",
-        headers: {
-          "content-Type": "application/json",
+      Headers: {
+          "content-Type": "application/json"
         },
         body: JSON.stringify(updateData),
       })
@@ -134,8 +136,7 @@ function editPost(id) {
           alert(`${data.name} succesfully update`);
 
           fetchPost();
-          document.getElementById("create-post").style.display = "block";
-          document.getElementById("update-post").style.display = "none";
+       
           console.log(data);
         })
         .catch((error) => console.log(error));
