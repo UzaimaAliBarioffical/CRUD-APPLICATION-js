@@ -48,27 +48,7 @@ textarea {
     margin: 10px 0;
     border: 1px solid #ccc;
     
-        /* <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#bracelets">Bracelets</a></li>
-                <li><a href="#about">About</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="home">
-            <h1>Welcome to Bracelet Whimsy!</h1>
-            <p>Explore our collection of unique and handmade bracelets.</p>
-        </section>
-        <section id="bracelets">
-            <!-- bracelet list will go here -->
-        </section>
-        <section id="about">
-            <h1>About Us</h1>
-            <p>We're a team of passionate jewelry makers dedicated to creating one-of-a-kind bracelets.</p>
-        </section>
-    </main>px; */
+     
 }
 
 textarea {
@@ -126,19 +106,4 @@ button:hover {
 .delete-btn:hover {
     opacity: 0.8;
 }
-     /* <div class="container">
-<h1>Crud application</h1>
-<div class="row">
-    <div class="col-6">
-        <h2>posts</h2>
-    </div>
-    <div class="post"></div>
-    <div class="col-6">
-<div id="create-post">
-    <h2>Create posts</h2>
-    <form id="create-post-form"></form>
-    <input type="text" name="name" id="">
-</div>
-    </div>
-</div>
-     </div> */
+    

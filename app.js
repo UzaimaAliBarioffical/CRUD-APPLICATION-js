@@ -12,7 +12,7 @@ function displayData(post) {
   const postparentDiv = document.getElementById("posts");
   postparentDiv.innerHTML = "";
   post.forEach((post) => {
-    console.log(post);
+    // console.log(post);
 
     const postDiv = document.createElement("div");
     postDiv.classList.add("post");
@@ -34,12 +34,13 @@ function displayData(post) {
 
     console.log(post);
   });
+
+
+  
 }
 // ======createpost====
 
-document
-  .getElementById("createPostForm")
-  .addEventListener("submit", function (e) {
+document.getElementById("createPostForm").addEventListener("submit", function (e) {
     e.preventDefault();
     const name = document.getElementById("name").value;
     const tittle = document.getElementById("title").value;
@@ -49,16 +50,16 @@ document
       Name: name,
       tittle: tittle,
       avatar: avatar,
-      body: description,
+      body: body,
       createdAt: new Date().toISOString,
     };
 
     console.log(newPost);
 
     fetch(apiUrl, {
-      method: "post",
+      method: 'POST',
       Headers: {
-        "content-Type": "application",
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify(newPost),
     })
@@ -110,13 +111,13 @@ document.getElementById("updatepostForm").body.value =post.body
     const name = document.getElementById("name").value;
       const tittle = document.getElementById("title").value;
       const avatar = document.getElementById("avatar").value;
-      const description = document.getElementById("body").value;
+      const body = document.getElementById("body").value;
       const ubdateData = {
         Name: name,
         tittle: tittle,
         avatar: avatar,
-        body: description,
-        createdAt : new Date().toISOString,
+        body: body,
+        createdAt: new Date().toISOString,
       };
   
       fetch(`${apiUrl}/${id}`, {
@@ -139,7 +140,7 @@ document.getElementById("update-post").style.display="none"
       )
         .catch((error) => console.log(error));
   
-        console.log("data",name,tittle,avatar,description);
+        console.log("data",name,tittle,avatar,body);
     });
     
   
